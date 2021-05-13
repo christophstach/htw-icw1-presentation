@@ -1,0 +1,58 @@
+\documentclass{beamer}
+
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{hyperref}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+
+\setbeamertemplate{bibliography item}[text]
+
+\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
+\renewcommand{\lstlistingname}{Code snippet}
+
+
+\definecolor{danger}{RGB}{220, 53, 69}
+\newenvironment{longlisting}{\captionsetup{type=listing}}{}
+
+\usetheme{metropolis}
+
+
+\definecolor{HTWGreen}{HTML}{76B900}
+\definecolor{HTWBlue}{HTML}{0082D1}
+\definecolor{HTWOrange}{HTML}{FF5F00}
+\definecolor{HTWGrey}{HTML}{AFAFAF}
+\definecolor{HTWWhite}{HTML}{FFFFFF}
+\definecolor{HTWBlack}{HTML}{000000}
+
+\setbeamercolor{frametitle}{%
+    bg=HTWGreen
+}
+
+\setbeamercolor{alerted text}{%
+    fg=HTWOrange
+}
+
+\setbeamercolor{normal text}{%
+  fg=HTWBlack,
+  bg=HTWWhite
+}
+
+\setminted[cpp]{,
+    fontsize=\footnotesize,
+    linenos,
+    breaklines
+}
