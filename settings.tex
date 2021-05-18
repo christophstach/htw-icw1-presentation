@@ -1,7 +1,6 @@
 \documentclass{beamer}
 
 \usepackage{lmodern}
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
 \usepackage{minted}
@@ -9,21 +8,27 @@
 \usepackage{graphicx}
 \usepackage{grffile}
 \usepackage{hyperref}
-\usepackage[ngerman]{babel}
+\usepackage[style=ieee,backend=biber,bibencoding=utf8]{biblatex}
 \usepackage{csquotes}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+
+\addbibresource{references/books.bib}
+\addbibresource{references/online.bib}
+\addbibresource{references/papers.bib}
 
 
 \setbeamertemplate{bibliography item}[text]
 
-\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
-\renewcommand{\lstlistingname}{Code snippet}
-
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
 \definecolor{danger}{RGB}{220, 53, 69}
 \newenvironment{longlisting}{\captionsetup{type=listing}}{}
@@ -56,3 +61,6 @@
     linenos,
     breaklines
 }
+\setbeamertemplate{bibliography item}[text]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]

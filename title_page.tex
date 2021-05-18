@@ -1,0 +1,42 @@
+\definecolor{htwgruen}{RGB}{118, 185, 0}
+\definecolor{htwblau}{RGB}{0, 130, 209}
+\definecolor{htworange}{RGB}{255, 95, 0}
+\definecolor{htwgrau}{RGB}{175, 175, 175}
+
+
+\newcommand*{\supervisor}[1]{\gdef\insertsupervisor{#1}}
+\newcommand*{\matrikelNo}[1]{\gdef\insertmatrikelno{#1}}
+
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
+\setbeamertemplate{title page}{
+    \begin{minipage}[c][\paperheight]{\textwidth}
+        \ifx\inserttitlegraphic\@empty\else\usebeamertemplate*{title graphic}\fi
+        \vfill
+        \vfill
+        \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+        \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+        \usebeamertemplate*{title separator}
+        \vspace*{1.2em}
+        \begin{minipage}[t]{.5\textwidth}
+            \ifx\insertauthor\@empty\else
+            \textbf{Author:} \par
+            \small{\insertauthor} \par
+            \ifx\insertmatrikelno\@empty\else \small{\insertmatrikelno} \par \fi
+            \fi
+            \ifx\insertinstitute\@empty\else \small{\insertinstitute} \par \fi
+
+        \end{minipage}
+        \begin{minipage}[t]{.5\textwidth}
+            \ifx\insertsupervisor\@empty\else \textbf{Supervisor:} \par \small{\insertsupervisor} \par \fi
+        \end{minipage}
+        
+        \vspace*{3.2em}
+        \ifx\insertdate\@empty\else \tiny{\insertdate} \par \fi
+
+        \vfill
+        \vspace*{1mm}
+    \end{minipage}
+}
